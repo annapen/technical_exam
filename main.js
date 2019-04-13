@@ -49,17 +49,7 @@ elForm.addEventListener('submit', function(event) {
     event.preventDefault()
     newCoder = new StudentProfile(name.value, language.value, school.value)
     developers.push(newCoder)
-    function addDataToLocalStorage(data){
-        localStorage.setItem('CoderFile', JSON.stringify(data))
-      }
 console.log(newCoder)
 newCoder.showStudentDetails()
+localStorage.setItem('coderStorage', JSON.stringify(newCoder))
 })
-
-// // function renderNewCoder(event){
-    
-//     console.log(newCoder)
-//     displayCoderDetails(newCoder)
-//     localStorage.setItem('coderStudentStorage', JSON.stringify(developers))
-// }
-// elForm.addEventListener('enter', renderNewCoder)
